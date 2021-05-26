@@ -5,6 +5,8 @@ import { Navbar } from "../components/nav/Navbar";
 import { IntlProvider } from "react-intl";
 import { LOCALES } from "../i18n/locales";
 import messages from "../i18n/messages";
+import MySpaces from "../pages/my-spaces/MySpaces";
+import Rooms from "../pages/rooms/Rooms";
 
 export const AppRouter = () => {
   const [language, setLanguage] = useState(LOCALES.ENGLISH);
@@ -18,7 +20,10 @@ export const AppRouter = () => {
             <HomesList />
           </Route>
           <Route exact path="/homes">
-            <HomesList />
+            <MySpaces />
+          </Route>
+          <Route exact path="/homes/:id">
+            <Rooms />
           </Route>
         </Switch>
       </Router>
