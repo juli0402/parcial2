@@ -1,10 +1,11 @@
 import React from 'react'
-import Devices from './Devices'
 
 const CardRoom = (props) => {
+  const {idx, setNewIndex} = props;
     return (
-        <>
-        <div className="card card-home">
+        <div className="card card-home" onClick={()=>{
+          setNewIndex(idx);
+        }}>
         <div className="card-home-body">
           <div className="card-home-body-description">
             <h5 className="card-home-title">{props.name}</h5>
@@ -20,7 +21,6 @@ const CardRoom = (props) => {
             />
           )}
       </div>
-      </>
     )
 }
 

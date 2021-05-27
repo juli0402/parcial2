@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { FormattedMessage } from 'react-intl';
 import {Card} from '../../components/card/Card'
 import { getHomes } from '../../services/utils';
 
@@ -12,7 +13,7 @@ const MySpaces = () => {
     return (
       <div className="container home">
         <h1>
-          Mis espacios
+          <FormattedMessage id="spaces" />
         </h1>
         {homes && homes.map((home)=> {
             return(

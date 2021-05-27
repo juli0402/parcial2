@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
 const Devices = (props) => {
     return (
@@ -8,8 +9,12 @@ const Devices = (props) => {
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">ID</th>
-                    <th scope="col">Device</th>
-                    <th scope="col">Value</th>
+                    <th scope="col">
+                        <FormattedMessage id="device" />
+                    </th>
+                    <th scope="col">
+                        <FormattedMessage id="value" />
+                    </th>
                 </tr>
             </thead>
             <tbody>
