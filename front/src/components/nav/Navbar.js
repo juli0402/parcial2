@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import "./Navbar.css";
 import { FormattedMessage } from "react-intl";
 import { LOCALES } from "../../i18n/locales";
 
-export const Navbar = ({ setLanguage }) => {
+export const Navbar = ({ setLanguage, language}) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -34,17 +35,15 @@ export const Navbar = ({ setLanguage }) => {
             </div>
           </div>
         </div>
-        <div>
-          <button onClick={()=>{
+        <div className="language">
+          <img className = {(language==="es-co") && "selected"} src= "/es.png" alt = "" onClick={()=>{
             setLanguage(LOCALES.SPANISH)
-          }}>
-            ES
-          </button>
-          <button onClick={()=>{
+          }}
+          />
+          <img className = {(language==="en-us") && "selected"} src = "/en.png" alt = "" onClick={()=>{
             setLanguage(LOCALES.ENGLISH)
-          }}>
-            EN
-          </button>
+          }}
+          />
         </div>
       </div>
     </nav>

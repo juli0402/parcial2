@@ -18,17 +18,27 @@ const Rooms = () => {
     }, []);
   
     return (
-        <div>
-          <h1>
-            <FormattedMessage id="myRooms" />
-          </h1>
-          {rooms && rooms.map((room, idx)=> {
+        <div className = "container">
+          <div className = "row">
+            <div className = "col-12">
+            <h1>
+              <FormattedMessage id="myRooms" />
+            </h1>
+            </div>
+            <div className = "col-6">
+            {rooms && rooms.map((room, idx)=> {
             return(
               <CardRoom {...room} idx = {idx} setNewIndex = {setNewIndex} />
             )
           })}
-          <Devices {...rooms[deviceIndex]} />
-          <PieChart rooms={rooms}/>
+            </div>
+            <div className = "col-6">
+            <Devices {...rooms[deviceIndex]} />
+            </div>
+            <div className = "col-12" style={{textAlign:"center", marginTop: "20px"}}>
+              <PieChart rooms={rooms}/>
+            </div>
+          </div>
         </div>
     ) 
 }

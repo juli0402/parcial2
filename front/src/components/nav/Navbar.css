@@ -1,0 +1,11 @@
+.language img{
+    width: 30px;
+    margin: 0 10px;
+}
+.language img:hover{
+    cursor: pointer;
+}
+.language img.selected{
+    border-radius: 50%;
+    border: 1px solid blue;
+}

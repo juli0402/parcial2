@@ -1,4 +1,5 @@
 import React from 'react'
+import "./cardRoom.css";
 
 const CardRoom = (props) => {
   const {idx, setNewIndex} = props;

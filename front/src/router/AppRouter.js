@@ -14,7 +14,7 @@ export const AppRouter = () => {
   return (
     <IntlProvider locale={language} messages={messages[language]}>
       <Router>
-        <Navbar setLanguage={setLanguage}></Navbar>
+        <Navbar setLanguage={setLanguage} language={language}></Navbar>
         <Switch>
           <Route exact path="/">
             <HomesList />
